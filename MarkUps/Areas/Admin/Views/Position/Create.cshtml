@@ -1,0 +1,21 @@
+﻿@using MarkUps.Areas.Admin.ViewModels;
+@using MarkUps.Models;
+@model PositionCreateVM
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Position</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Name">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <a class="btn btn-light" asp-action="index" asp-controller="position">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
